@@ -1,0 +1,1087 @@
+{
+  "sourceDocument": {
+    "fileName": "balance_sheet_after_correction.pdf",
+    "sourceLanguage": "ja",
+    "correctionStatus": "corrected"
+  },
+  "statement": {
+    "statementType": "consolidated_balance_sheet",
+    "labels": {
+      "ja": "連結貸借対照表",
+      "en": "Consolidated Balance Sheet"
+    },
+    "periods": [
+      {
+        "id": "2025-03-31",
+        "kind": "prior",
+        "date": "2025-03-31",
+        "labels": {
+          "ja": "前連結会計年度 (2025 年３月 31 日)",
+          "en": "Prior Consolidated Fiscal Year (March 31, 2025)"
+        }
+      },
+      {
+        "id": "2026-03-31",
+        "kind": "current",
+        "date": "2026-03-31",
+        "labels": {
+          "ja": "当連結会計年度 (2026 年３月 31 日)",
+          "en": "Current Consolidated Fiscal Year (March 31, 2026)"
+        }
+      }
+    ],
+    "unit": {
+      "currency": "JPY",
+      "multiplier": 1000,
+      "labelJa": "千円"
+    },
+    "items": [
+      {
+        "nodeId": "assets",
+        "kind": "category",
+        "labels": {
+          "ja": "資産の部",
+          "en": "Assets"
+        },
+        "operator": "TOTAL",
+        "values": [],
+        "children": [
+          {
+            "nodeId": "current_assets",
+            "kind": "category",
+            "labels": {
+              "ja": "流動資産",
+              "en": "Current assets"
+            },
+            "operator": "ADD",
+            "values": [],
+            "children": [
+              {
+                "nodeId": "cash_and_deposits",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "現金及び預金",
+                  "en": "Cash and deposits"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 2002429000,
+                    "sourceText": "2,002,429"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 608281000,
+                    "sourceText": "608,281"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "CASH_AND_DEPOSITS",
+                "aliases": []
+              },
+              {
+                "nodeId": "notes_receivable_trade",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "受取手形",
+                  "en": "Notes receivable - trade"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 20659000,
+                    "sourceText": "20,659"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 26333000,
+                    "sourceText": "26,333"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "NOTES_RECEIVABLE_TRADE",
+                "aliases": []
+              },
+              {
+                "nodeId": "accounts_receivable_trade",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "売掛金",
+                  "en": "Accounts receivable - trade"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 2019476000,
+                    "sourceText": "2,019,476"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 884339000,
+                    "sourceText": "884,339"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "ACCOUNTS_RECEIVABLE_TRADE",
+                "aliases": []
+              },
+              {
+                "nodeId": "electronically_recorded_monetary_claims",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "電子記録債権",
+                  "en": "Electronically recorded monetary claims - operating"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 564667000,
+                    "sourceText": "564,667"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 370468000,
+                    "sourceText": "370,468"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "ELECTRONICALLY_RECORDED_MONETARY_CLAIMS_OPERATING",
+                "aliases": []
+              },
+              {
+                "nodeId": "merchandise_and_finished_goods",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "商品及び製品",
+                  "en": "Merchandise and finished goods"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 589488000,
+                    "sourceText": "589,488"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 1019663000,
+                    "sourceText": "1,019,663"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "MERCHANDISE_AND_FINISHED_GOODS",
+                "aliases": []
+              },
+              {
+                "nodeId": "work_in_process",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "仕掛品",
+                  "en": "Work in process"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 186748000,
+                    "sourceText": "186,748"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 55344000,
+                    "sourceText": "55,344"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "WORK_IN_PROCESS",
+                "aliases": []
+              },
+              {
+                "nodeId": "raw_materials_and_supplies",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "原材料及び貯蔵品",
+                  "en": "Raw materials and supplies"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 370403000,
+                    "sourceText": "370,403"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 136082000,
+                    "sourceText": "136,082"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "RAW_MATERIALS_AND_SUPPLIES",
+                "aliases": []
+              },
+              {
+                "nodeId": "short_term_loans_receivable",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "短期貸付金",
+                  "en": "Short-term loans receivable"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 7530000,
+                    "sourceText": "7,530"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 30000000,
+                    "sourceText": "30,000"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "SHORT_TERM_LOANS_RECEIVABLE",
+                "aliases": []
+              },
+              {
+                "nodeId": "other_current_assets",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "その他",
+                  "en": "Other"
+                },
+                "operator": "ADD",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 105260000,
+                    "sourceText": "105,260"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 246895000,
+                    "sourceText": "246,895"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "OTHER",
+                "aliases": []
+              },
+              {
+                "nodeId": "allowance_for_doubtful_accounts_current",
+                "kind": "line_item",
+                "labels": {
+                  "ja": "貸倒引当金",
+                  "en": "Allowance for doubtful accounts"
+                },
+                "operator": "SUBTRACT",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": -2979000,
+                    "sourceText": "△2,979"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 0,
+                    "sourceText": "△0"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "ALLOWANCE_FOR_DOUBTFUL_ACCOUNTS",
+                "aliases": []
+              },
+              {
+                "nodeId": "total_current_assets",
+                "kind": "subtotal",
+                "labels": {
+                  "ja": "流動資産合計",
+                  "en": "Total current assets"
+                },
+                "operator": "TOTAL",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 5863684000,
+                    "sourceText": "5,863,684"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 3377407000,
+                    "sourceText": "3,377,407"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "TOTAL_CURRENT_ASSETS",
+                "aliases": []
+              }
+            ],
+            "canonicalKey": "CURRENT_ASSETS",
+            "aliases": []
+          },
+          {
+            "nodeId": "non_current_assets",
+            "kind": "category",
+            "labels": {
+              "ja": "固定資産",
+              "en": "Non-current assets"
+            },
+            "operator": "ADD",
+            "values": [],
+            "children": [
+              {
+                "nodeId": "property_plant_and_equipment",
+                "kind": "category",
+                "labels": {
+                  "ja": "有形固定資産",
+                  "en": "Property, plant and equipment"
+                },
+                "operator": "ADD",
+                "values": [],
+                "children": [
+                  {
+                    "nodeId": "buildings_and_structures",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "建物及び構築物",
+                      "en": "Buildings and structures"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 2121360000,
+                        "sourceText": "2,121,360"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 1880082000,
+                        "sourceText": "1,880,082"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "BUILDINGS_AND_STRUCTURES",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "buildings_and_structures_accumulated_depreciation",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "減価償却累計額",
+                      "en": "Accumulated depreciation"
+                    },
+                    "operator": "SUBTRACT",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": -1923585000,
+                        "sourceText": "△1,923,585"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": -1640253000,
+                        "sourceText": "△1,640,253"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "ACCUMULATED_DEPRECIATION",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "buildings_and_structures_net",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "建物及び構築物（純額）",
+                      "en": "Buildings and structures, net"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 197775000,
+                        "sourceText": "197,775"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 239828000,
+                        "sourceText": "239,828"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "BUILDINGS_AND_STRUCTURES_NET",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "machinery_equipment_and_vehicles",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "機械装置及び運搬具",
+                      "en": "Machinery, equipment and vehicles"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 4024922000,
+                        "sourceText": "4,024,922"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 2250799000,
+                        "sourceText": "2,250,799"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "MACHINERY_EQUIPMENT_AND_VEHICLES",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "machinery_equipment_and_vehicles_accumulated_depreciation",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "減価償却累計額",
+                      "en": "Accumulated depreciation"
+                    },
+                    "operator": "SUBTRACT",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": -3634165000,
+                        "sourceText": "△3,634,165"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": -1914091000,
+                        "sourceText": "△1,914,091"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "ACCUMULATED_DEPRECIATION",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "machinery_equipment_and_vehicles_net",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "機械装置及び運搬具（純額）",
+                      "en": "Machinery, equipment and vehicles, net"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 390757000,
+                        "sourceText": "390,757"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 336708000,
+                        "sourceText": "336,708"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "MACHINERY_EQUIPMENT_AND_VEHICLES_NET",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "land",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "土地",
+                      "en": "Land"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 768976000,
+                        "sourceText": "768,976"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 705403000,
+                        "sourceText": "705,403"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "LAND",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "lease_assets_ppe",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "リース資産",
+                      "en": "Lease assets"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 210746000,
+                        "sourceText": "210,746"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 213939000,
+                        "sourceText": "213,939"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "LEASE_ASSETS",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "lease_assets_ppe_accumulated_depreciation",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "減価償却累計額",
+                      "en": "Accumulated depreciation"
+                    },
+                    "operator": "SUBTRACT",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": -147599000,
+                        "sourceText": "△147,599"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": -172066000,
+                        "sourceText": "△172,066"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "ACCUMULATED_DEPRECIATION",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "lease_assets_ppe_net",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "リース資産（純額）",
+                      "en": "Lease assets, net"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 63146000,
+                        "sourceText": "63,146"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 41872000,
+                        "sourceText": "41,872"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "LEASE_ASSETS_NET",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "construction_in_progress",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "建設仮勘定",
+                      "en": "Construction in progress"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "not_reported",
+                        "amount": null,
+                        "sourceText": "－"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 4553000,
+                        "sourceText": "4,553"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "CONSTRUCTION_IN_PROGRESS",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "other_ppe",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "その他",
+                      "en": "Other"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 848814000,
+                        "sourceText": "848,814"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 446126000,
+                        "sourceText": "446,126"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "OTHER",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "other_ppe_accumulated_depreciation",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "減価償却累計額",
+                      "en": "Accumulated depreciation"
+                    },
+                    "operator": "SUBTRACT",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": -840375000,
+                        "sourceText": "△840,375"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": -421883000,
+                        "sourceText": "△421,883"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "ACCUMULATED_DEPRECIATION",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "other_ppe_net",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "その他（純額）",
+                      "en": "Other, net"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 8439000,
+                        "sourceText": "8,439"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 24243000,
+                        "sourceText": "24,243"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "OTHER_NET",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "total_property_plant_and_equipment",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "有形固定資産合計",
+                      "en": "Total property, plant and equipment"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 1429094000,
+                        "sourceText": "1,429,094"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 1352610000,
+                        "sourceText": "1,352,610"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "TOTAL_PROPERTY_PLANT_AND_EQUIPMENT",
+                    "aliases": []
+                  }
+                ],
+                "canonicalKey": "PROPERTY_PLANT_AND_EQUIPMENT",
+                "aliases": []
+              },
+              {
+                "nodeId": "intangible_assets",
+                "kind": "category",
+                "labels": {
+                  "ja": "無形固定資産",
+                  "en": "Intangible assets"
+                },
+                "operator": "ADD",
+                "values": [],
+                "children": [
+                  {
+                    "nodeId": "lease_assets_intangible",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "リース資産",
+                      "en": "Lease assets"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 34190000,
+                        "sourceText": "34,190"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 21402000,
+                        "sourceText": "21,402"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "LEASE_ASSETS",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "other_intangible_assets",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "その他",
+                      "en": "Other"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 10070000,
+                        "sourceText": "10,070"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 14466000,
+                        "sourceText": "14,466"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "OTHER",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "total_intangible_assets",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "無形固定資産合計",
+                      "en": "Total intangible assets"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 44261000,
+                        "sourceText": "44,261"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 35869000,
+                        "sourceText": "35,869"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "TOTAL_INTANGIBLE_ASSETS",
+                    "aliases": []
+                  }
+                ],
+                "canonicalKey": "INTANGIBLE_ASSETS",
+                "aliases": []
+              },
+              {
+                "nodeId": "investments_and_other_assets",
+                "kind": "category",
+                "labels": {
+                  "ja": "投資その他の資産",
+                  "en": "Investments and other assets"
+                },
+                "operator": "ADD",
+                "values": [],
+                "children": [
+                  {
+                    "nodeId": "investment_securities",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "投資有価証券",
+                      "en": "Investment securities"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 44180000,
+                        "sourceText": "44,180"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 218836000,
+                        "sourceText": "218,836"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "INVESTMENT_SECURITIES",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "shares_of_subsidiaries_and_associates",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "関係会社株式",
+                      "en": "Shares of subsidiaries and associates"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 1123000,
+                        "sourceText": "1,123"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 1123000,
+                        "sourceText": "1,123"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "SHARES_OF_SUBSIDIARIES_AND_ASSOCIATES",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "long_term_loans_receivable",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "長期貸付金",
+                      "en": "Long-term loans receivable"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "not_reported",
+                        "amount": null,
+                        "sourceText": "－"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 62000000,
+                        "sourceText": "62,000"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "LONG_TERM_LOANS_RECEIVABLE",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "retirement_benefit_asset",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "退職給付に係る資産",
+                      "en": "Retirement benefit asset"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 18404000,
+                        "sourceText": "18,404"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 16435000,
+                        "sourceText": "16,435"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "RETIREMENT_BENEFIT_ASSET",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "other_investments_and_other_assets",
+                    "kind": "line_item",
+                    "labels": {
+                      "ja": "その他",
+                      "en": "Other"
+                    },
+                    "operator": "ADD",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 133361000,
+                        "sourceText": "133,361"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 70967000,
+                        "sourceText": "70,967"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "OTHER",
+                    "aliases": []
+                  },
+                  {
+                    "nodeId": "total_investments_and_other_assets",
+                    "kind": "subtotal",
+                    "labels": {
+                      "ja": "投資その他の資産合計",
+                      "en": "Total investments and other assets"
+                    },
+                    "operator": "TOTAL",
+                    "values": [
+                      {
+                        "periodId": "2025-03-31",
+                        "status": "reported",
+                        "amount": 197069000,
+                        "sourceText": "197,069"
+                      },
+                      {
+                        "periodId": "2026-03-31",
+                        "status": "reported",
+                        "amount": 369362000,
+                        "sourceText": "369,362"
+                      }
+                    ],
+                    "children": [],
+                    "canonicalKey": "TOTAL_INVESTMENTS_AND_OTHER_ASSETS",
+                    "aliases": []
+                  }
+                ],
+                "canonicalKey": "INVESTMENTS_AND_OTHER_ASSETS",
+                "aliases": []
+              },
+              {
+                "nodeId": "total_non_current_assets",
+                "kind": "subtotal",
+                "labels": {
+                  "ja": "固定資産合計",
+                  "en": "Total non-current assets"
+                },
+                "operator": "TOTAL",
+                "values": [
+                  {
+                    "periodId": "2025-03-31",
+                    "status": "reported",
+                    "amount": 1670426000,
+                    "sourceText": "1,670,426"
+                  },
+                  {
+                    "periodId": "2026-03-31",
+                    "status": "reported",
+                    "amount": 1757841000,
+                    "sourceText": "1,757,841"
+                  }
+                ],
+                "children": [],
+                "canonicalKey": "TOTAL_NON_CURRENT_ASSETS",
+                "aliases": []
+              }
+            ],
+            "canonicalKey": "NON_CURRENT_ASSETS",
+            "aliases": []
+          },
+          {
+            "nodeId": "total_assets",
+            "kind": "total",
+            "labels": {
+              "ja": "資産合計",
+              "en": "Total assets"
+            },
+            "operator": "TOTAL",
+            "values": [
+              {
+                "periodId": "2025-03-31",
+                "status": "reported",
+                "amount": 7534110000,
+                "sourceText": "7,534,110"
+              },
+              {
+                "periodId": "2026-03-31",
+                "status": "reported",
+                "amount": 5135249000,
+                "sourceText": "5,135,249"
+              }
+            ],
+            "children": [],
+            "canonicalKey": "TOTAL_ASSETS",
+            "aliases": []
+          }
+        ],
+        "canonicalKey": "ASSETS",
+        "aliases": []
+      }
+    ]
+  }
+}

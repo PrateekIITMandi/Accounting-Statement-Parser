@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Japanese Corporate Balance Sheet",
+  "description": "A bilingual, hierarchical representation of a Japanese corporate balance sheet. Amounts are normalized to yen after applying the statement unit multiplier; original printed amount tokens are preserved.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sourceDocument",
+    "statement"
+  ],
+  "properties": {
+    "sourceDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fileName",
+        "sourceLanguage",
+        "correctionStatus"
+      ],
+      "properties": {
+        "fileName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLanguage": {
+          "const": "ja"
+        },
+        "correctionStatus": {
+          "type": "string",
+          "enum": [
+            "original",
+            "corrected",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "statement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statementType",
+        "labels",
+        "periods",
+        "unit",
+        "items"
+      ],
+      "properties": {
+        "statementType": {
+          "type": "string",
+          "enum": [
+            "consolidated_balance_sheet",
+            "separate_balance_sheet"
+          ]
+        },
+        "labels": {
+          "$ref": "#/$defs/bilingualLabel"
+        },
+        "periods": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/period"
+          }
+        },
+        "unit": {
+          "$ref": "#/$defs/unit"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/accountingNode"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "bilingualLabel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ja",
+        "en"
+      ],
+      "properties": {
+        "ja": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The Japanese label as printed in the filing."
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A faithful English translation of the Japanese accounting label."
+        }
+      }
+    },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "date",
+        "labels"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "description": "Stable key used by reported values to identify this period."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "current",
+            "prior",
+            "other"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "The balance-sheet instant date in ISO 8601 format."
+        },
+        "labels": {
+          "$ref": "#/$defs/bilingualLabel"
+        }
+      }
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "currency",
+        "multiplier",
+        "labelJa"
+      ],
+      "properties": {
+        "currency": {
+          "const": "JPY"
+        },
+        "multiplier": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Scale applied to each reported amount; 1000 represents amounts reported in thousand yen."
+        },
+        "labelJa": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The unit text as printed, such as 千円."
+        }
+      }
+    },
+    "reportedValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "periodId",
+        "status",
+        "amount",
+        "sourceText"
+      ],
+      "properties": {
+        "periodId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "reported",
+            "not_reported",
+            "not_applicable",
+            "unreadable"
+          ]
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Numeric amount normalized to yen by multiplying the displayed amount by statement.unit.multiplier. A printed negative marker makes the amount negative. Use null for a dash, blank, or unreadable value; do not convert a printed zero to null."
+        },
+        "sourceText": {
+          "type": "string",
+          "description": "The original amount token, preserving formatting such as commas, △, and －."
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "status": {
+              "const": "reported"
+            },
+            "amount": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "enum": [
+                "not_reported",
+                "not_applicable",
+                "unreadable"
+              ]
+            },
+            "amount": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "accountingNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nodeId",
+        "kind",
+        "labels",
+        "operator",
+        "values",
+        "children"
+      ],
+      "properties": {
+        "nodeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$",
+          "description": "Unique within the statement; may encode the node's position in the hierarchy."
+        },
+        "canonicalKey": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable uppercase snake-case lookup key generated from the English accounting label."
+        },
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Optional alternate English or Japanese lookup terms."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "category",
+            "line_item",
+            "subtotal",
+            "total"
+          ]
+        },
+        "labels": {
+          "$ref": "#/$defs/bilingualLabel"
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "ADD",
+            "SUBTRACT",
+            "TOTAL"
+          ],
+          "description": "How the item contributes to its nearest applicable parent total. ADD contributes its signed amount; SUBTRACT subtracts the amount's magnitude for contra-accounts such as accumulated depreciation and allowance for doubtful accounts, even when printed positive. TOTAL marks a displayed total and is excluded when ADD/SUBTRACT detail rows are present; if all direct children are TOTAL rows, those subtotals contribute to the parent."
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reportedValue"
+          },
+          "description": "One value per period when the node has a reported amount; categories without their own amount use an empty array."
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/accountingNode"
+          },
+          "description": "Direct child terms, in filing order; indentation determines parent-child nesting."
+        }
+      }
+    }
+  }
+}
